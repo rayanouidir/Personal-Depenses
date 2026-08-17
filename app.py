@@ -6,7 +6,6 @@ from datetime import datetime
 # --- Configuration de la page ---
 st.set_page_config(
     page_title="Dashboard Dépenses Personnelles",
-    page_icon="💸",
     layout="wide"
 )
 
