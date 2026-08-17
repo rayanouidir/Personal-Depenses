@@ -31,7 +31,7 @@ def load_sample_data():
     return pd.read_csv("sample_data.csv", parse_dates=["date"])
 
 # --- Sidebar : upload et filtres ---
-st.sidebar.title("⚙️ Options")
+st.sidebar.title("Options")
 uploaded_file = st.sidebar.file_uploader(
     "Importer un fichier CSV (colonnes: date, description, montant)",
     type="csv"
@@ -139,7 +139,7 @@ with col_right:
 st.markdown("---")
 
 # --- Tableau détaillé ---
-st.subheader("📋 Détail des transactions")
+st.subheader("Détail des transactions")
 st.dataframe(
     df.sort_values("date", ascending=False)[["date", "description", "categorie", "montant"]],
     use_container_width=True,
@@ -149,7 +149,7 @@ st.dataframe(
 # --- Export ---
 csv_export = df.to_csv(index=False).encode("utf-8")
 st.download_button(
-    "⬇️ Télécharger les données filtrées (CSV)",
+    "Télécharger les données filtrées (CSV)",
     csv_export,
     "depenses_filtrees.csv",
     "text/csv"
