@@ -72,7 +72,7 @@ if len(date_range) == 2:
 df = df[df["categorie"].isin(categories)]
 
 # --- En-tête ---
-st.title("💸 Dashboard de Dépenses Personnelles")
+st.title("Dashboard de Dépenses Personnelles")
 st.caption("Importez vos relevés bancaires (CSV) et visualisez vos habitudes de dépenses.")
 
 # --- Indicateurs clés ---
